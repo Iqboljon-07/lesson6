@@ -1,0 +1,117 @@
+.skeleton{
+    width:100%;
+    padding: 40px;
+  
+      display: grid;
+      grid-template-columns:repeat(4,1fr);
+      grid-gap:20px;
+      grid-auto-rows: 300px;
+
+
+}
+
+.skeleton_item{
+
+    background-color:#bbb;
+
+    
+    border-radius: 20px;
+    display:grid;
+ justify-content: center;
+ align-content: space-evenly;
+
+    grid-template-rows: 100px  30px 30px 30px   ;
+ grid-template-columns: 300px ;
+
+
+
+}
+
+.skeleton_circle{
+
+background-color:#eee;
+
+
+}
+
+.skeleton_circle:nth-child(1){
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+    
+    }
+
+    .img{
+
+        width:100px;
+   height: 100px;
+      border-radius: 15px;
+      
+
+    }
+
+.skeleton_circle:nth-child(2){
+
+width:250px;
+
+}
+
+.skeleton_circle:nth-child(3){
+
+    width:200px;
+    
+    }
+
+    .skeleton_circle:nth-child(4){
+
+        width:150px;
+        
+        }
+
+        .skeleton_animation{
+
+          background:linear-gradient(90deg,rgb(120, 157, 120), #eee);
+            animation-name: animatsiya;
+            
+            animation-duration: 0.5s;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+    
+          background-size: 200%;
+          
+        }
+
+        @keyframes animatsiya{
+
+to{
+background-position: 200%;
+}
+
+        }
+      
+        .loader {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #FF3D00;
+          position: relative;
+        }
+        .loader:before,
+        .loader:after {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          inset: 0;
+          background: #fff;
+          transform: rotate(0deg) translate(30px);
+          animation: rotate 1s ease infinite;
+        }
+        .loader:after {
+          animation-delay: 0.5s
+        }
+        @keyframes rotate {
+          100% {transform: rotate(360deg) translate(30px)
+        }
+      }
