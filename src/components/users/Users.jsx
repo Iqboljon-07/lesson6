@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Users.css";
 import axios from "axios";
 import Skeleton from "../skeleton/Skeleton";
+import Navbar from "../Navbar/Navbar";
+
 function Users() {
   const [users, setUsers] = useState(null);
   const [loading, setLoading] = useState(false);
   const [ofset, setOfset] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [limit, setLimit] = useState(4);
   const [dark, setDark] = useState(false);
   const parPageCount = 4;
 
@@ -38,6 +42,7 @@ function Users() {
   }
   return (
     <>
+      <Navbar color="red" fontSize="18px" props1={setUsers} />
       <div className="wrapper">
         {users?.map((item) => (
           <div key={item.id} className="card">
