@@ -44,7 +44,7 @@ function Navbar({ color, fontSize }) {
       <Nav>
         <Input
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value.trim())}
           placeholder="search"
           style={css}
         />
